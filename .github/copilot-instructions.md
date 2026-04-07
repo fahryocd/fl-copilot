@@ -1,10 +1,6 @@
 # Copilot Code Review Instructions (PHP CodeIgniner 2)
 
-Act as a strict senior software engineer performing a security and performance review of this CodeIgniter 2 repository.
-
-Your job is to find problems, risks, bad practices and performance issues. Do not focus on compliments. Focus on what could break, scale badly, or cause security issues.
-
-Always review code carefully and assume production environment risks.
+Act as a strict senior software engineer. Find problems, risks, bad practices, and performance issues. Prioritize security issues first.
 
 ---
 
@@ -183,19 +179,6 @@ Check for:
 • Missing pagination
 • Slow queries
 • Missing query optimization
-
----
-
-# CI2 specific problems
-
-Check for:
-
-• Direct use of superglobals
-• Missing input filtering
-• Missing validation rules
-• Controller doing model work
-• Missing helper usage
-• Missing library usage
 
 ---
 
