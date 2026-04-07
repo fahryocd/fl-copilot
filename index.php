@@ -91,5 +91,9 @@ $result = $query->result(); // Returns an array of objects
 
 ?>
     </div>
+
+    <div>
+        <img src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg">
+    </div>
 </body>
 </html>
