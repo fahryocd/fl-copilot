@@ -108,5 +108,33 @@ foreach ($userCarList as $clientId => $users) {
         }
     }
 }
+
+function get_user_data($conn){
+
+    $users = getUserCarList($conn);
+    $list = [];
+    foreach ($users as $userId => $cars) {
+        // Process each car for the user
+        foreach ($cars as $car) {
+
+            $sql = "SELECT c.id AS client_id, u.id AS user_id, v.*, i.image_path 
+            FROM clients_tbl c 
+            JOIN user_tbl u ON c.user_id = u.id 
+            JOIN vehicles_tbl v ON c.id = v.client_id 
+            JOIN images_tbl i ON v.id = i.vehicle_id";
+
+            $result = $conn->query($sql);
+            
+            if ($result) {
+                while ($row = $result->fetch_assoc()) {
+                    $list[$row['client_id']][$row['user_id']][] = $row;
+                }
+            }
+        }
+    }
+
+    return $list;
+
+}
 $conn->close();
 ?>
