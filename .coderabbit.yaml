@@ -1,0 +1,56 @@
+reviews:
+  profile: "chill"
+
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: true
+
+  auto_review:
+    enabled: true
+    drafts: false
+
+  path_filters:
+    - "!vendor/**"
+    - "!node_modules/**"
+    - "!system/**"
+    - "!public/assets/**"
+
+chat:
+  auto_reply: true
+
+knowledge_base:
+  learnings:
+    scope: auto
+
+language: "en"
+
+tone_instructions: |
+  Review this repository as a senior PHP security engineer.
+
+  Frameworks:
+  - CodeIgniter 2
+  - CodeIgniter 4
+
+  Focus heavily on:
+  - SQL injection
+  - Unsafe query concatenation
+  - Raw SQL risks
+  - XSS
+  - CSRF
+  - File upload vulnerabilities
+  - Session/authentication issues
+  - Missing validation
+  - Unsafe use of $_GET, $_POST, $_REQUEST
+  - Dangerous shell execution
+  - Performance bottlenecks
+  - N+1 queries
+  - Missing DB indexes
+
+  Ignore:
+  - Code style
+  - Formatting
+  - Minor naming issues
+  - Refactoring suggestions unless security related
+
+  Be strict on security issues.
